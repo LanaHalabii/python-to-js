@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Lana Halabi Python to JS</title>
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+
+    <script>
+
+        length_sequence = parseInt(prompt("Enter the length of the sequence: "));
+
+        let BASE1_SEQUENCE = 0; 
+        let BASE2_SEQUENCE = 1; 
+
+        let TEMP_NUM1 = BASE1_SEQUENCE;
+        let TEMP_NUM2 = BASE2_SEQUENCE;
+
+        for (let i = 0; i < length_sequence; i++) {
+            if (i === 0) { 
+                console.log(0);
+            } else if (i === 1) { 
+                console.log(1);
+            } else {
+                let FIBONNACI_ITEM = TEMP_NUM1 + TEMP_NUM2;
+                console.log(FIBONNACI_ITEM);
+            
+                TEMP_NUM1 = TEMP_NUM2;
+                TEMP_NUM2 = FIBONNACI_ITEM;
+            }
+        }
+
+    </script>
+    </body>
+</html>
