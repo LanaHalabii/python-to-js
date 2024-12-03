@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Lana Halabi Python to JS</title>
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+
+    <script>
+
+        function longestSubarray(array) {
+            let countZeros = 0;  // to store the number of zeros
+            let countOnes = 0;   // to store the number of ones
+
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === 0) {
+                    countZeros++;  // count the zeros
+                } else {
+                    countOnes++;   // count the ones
+                }
+            }
+
+            if (countZeros > countOnes) {
+                console.log("The length of the longest subarray is ", countOnes * 2);  // based on the number of ones
+            } else if (countZeros < countOnes) {
+                console.log("The length of the longest subarray is ", countZeros * 2);  // based on the number of zeros
+            } else {
+                console.log("The array is already adjacent");  // no longer adjacent subarray
+            }
+        }
+
+        const mainArray = [0, 0, 1, 1, 1, 1];
+        longestSubarray(mainArray);
+
+    </script>
+    </body>
+</html>
