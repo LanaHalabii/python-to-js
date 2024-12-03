@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Lana Halabi Python to JS</title>
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+
+    <script>
+
+        function findPeaks(array) {
+            const peaks = [];  
+            const lenArray = array.length;
+
+            for (let i = 1; i < lenArray - 1; i++) { 
+                if (array[i] > array[i - 1] && array[i] > array[i + 1]) {
+                    peaks.push(i);  
+                }
+            }
+
+            return peaks;  
+        }
+
+        // Example usage
+        const array = [1, 5, 3, 6, 2, 9];
+        console.log(findPeaks(array));  
+
+</script>
+    </body>
+</html>
