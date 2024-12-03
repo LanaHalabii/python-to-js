@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Lana Halabi Python to JS</title>
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+
+    <script>
+
+        function rebuildSentence(words, lengths) {
+        
+        const selectedWords = [];
+
+        
+        for (let i = 0; i < lengths.length; i++) {
+            const length = lengths[i];
+            const word = words[i];
+
+            
+            if (word) {
+                
+                selectedWords.push(word.slice(0, length));
+            } else {
+                selectedWords.push(''); 
+            }
+        }
+
+        return selectedWords.join(' ').trim();
+    }
+
+    words = ["the", "sky", "is", "blue"]
+    lengths = [3, 2, 2, 1]
+    const result = rebuildSentence(words, lengths);
+    console.log(result);
+
+    </script>
+
+    </body>
+
+</html>
