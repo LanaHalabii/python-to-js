@@ -10,34 +10,32 @@
     <script>
         const rowsNumber = parseInt(prompt("Please enter the number of rows you want to print for your diamond shape:"));
 
-        // Top half of the diamond
         for (let i = 0; i < rowsNumber; i++) {
-            let line1 = "";  // Initialize an empty string for each line
+            let line1 = "";  
 
-            // Add spaces
+            
             for (let j = 0; j < rowsNumber - i - 1; j++) {
                 line1 += " ";
             }
-            // Add stars
+           
             for (let k = 0; k < 2 * i + 1; k++) {
                 line1 += "*";
             }
-            console.log(line1);  // Print the line
+            console.log(line1);  
         }
 
-        // Bottom half of the diamond
+       
         for (let i = rowsNumber - 1; i > 0; i--) {
-            let line2 = "";  // Initialize an empty string for each line
+            let line2 = ""; 
 
-            // Add spaces
             for (let j = 0; j < rowsNumber - i; j++) {
                 line2 += " ";
             }
-            // Add stars
+          
             for (let k = 0; k < 2 * i - 1; k++) {
                 line2 += "*";
             }
-            console.log(line2);  // Print the line
+            console.log(line2);  
         }
     </script>
     </body>
