@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Lana Halabi Python to JS</title>
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+
+    <script>
+
+        function maxProfit(prices) {
+            if (prices.length === 0) {  
+                return 0;
+            }
+
+            let maxProfit = 0; 
+            let minPrice = prices[0];  
+
+            for (let price of prices) {
+                if (price < minPrice) {  
+                    minPrice = price;
+                } else {
+                    const profit = price - minPrice;  e
+                    maxProfit = Math.max(maxProfit, profit);  
+                }
+            }
+
+            return maxProfit;  
+        }
+
+        
+        const arrayPrices = [5, 7, 1, 10, 4, 8];
+        console.log(maxProfit(arrayPrices));  
+
+    </script>
+    </body>
+</html>
